@@ -2,7 +2,7 @@
   <div class="buttons">
     <div v-if="currentIndex > 0" @click="$emit('setPreviousProject')" class="button">
       <font-awesome-icon class="fa-button" icon="arrow-circle-left" />
-      <p>Next Project</p>
+      <p>Previous Project</p>
     </div>
 
     <div v-if="project.vimeo" @click="$emit('openVideoModal')" class="button">
