@@ -1,17 +1,21 @@
 <template>
   <div class="contact page">
-    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="contact" />
-      <label>Your Name:</label>
-      <input type="text" name="name" />
-
-      <label>Your Email:</label>
-      <input type="email" name="email" />
-
-      <label>Message:</label>
-      <textarea name="message"></textarea>
-
-      <input type="submit" value="Send" name="submit" />
+    <form name="contact" netlify>
+      <p>
+        <label>
+          Name
+          <input type="text" name="name" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Email
+          <input type="email" name="email" />
+        </label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
     </form>
   </div>
 </template>
