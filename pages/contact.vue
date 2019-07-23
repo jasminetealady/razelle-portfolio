@@ -2,7 +2,7 @@
   <div class="contact page">
     <h1 class="title">Contact</h1>
     <div class="content">
-      <form name="contact" action method="post" netlify>
+      <form name="contact" data-netlify-honeypot="bot-field" method="post" netlify>
         <input type="hidden" name="form-name" value="contact" />
         <label class="form-label" for="name">Name:</label>
         <input class="form-field" name="name" id="name" />
