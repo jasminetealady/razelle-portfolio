@@ -37,5 +37,6 @@ export default {
 
 .home {
   align-items: center;
+  padding-bottom: 4rem;
 }
 </style>
