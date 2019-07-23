@@ -40,6 +40,7 @@ let projects = [
     category: 'vue',
     title: 'Speakfully',
     link: 'https://speakfully.com',
+    technologies: [`Can't disclose`],
     functionality:
       'Speakfully is a documentation platform for documenting sexual harassment, bias, and other forms of mistreatment in the workplace. The product provides the ability to create folders and within those folders create log entries with information about your experience. You can save, edit, and delete log entries, as well as open up existing log entries.',
     notes: `<p>In my previous role as a Software Engineer at Speakfully, I created applications for both the static website and the product. I built the static website and product following designs provided by an external design agency as well as internal UI/UX designer via Figma and Invision, as well as implementing user authorization.</p><br/><p>On May 12th 2019, we launched our MVP on a tight deadline.</p>`
