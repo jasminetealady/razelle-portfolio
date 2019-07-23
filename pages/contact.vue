@@ -1,6 +1,6 @@
 <template>
   <div class="contact page">
-    <form name="contact" netlify>
+    <form name="contact" method="POST" netlify>
       <label>Your Name:</label>
       <input type="text" name="name" />
 
