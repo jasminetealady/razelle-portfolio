@@ -1,6 +1,6 @@
 <template>
   <div class="contact page">
-    <form name="contact" action="POST" data-netlify="true">
+    <form name="contact" method="POST" action="thank-you" data-netlify="true">
       <label>Your Name:</label>
       <input type="text" name="name" />
 
@@ -10,7 +10,7 @@
       <label>Message:</label>
       <textarea name="message"></textarea>
 
-      <button type="submit">Send</button>
+      <input type="submit" value="Send" name="submit"></input>
     </form>
   </div>
 </template>
@@ -51,7 +51,7 @@ export default {};
       border: solid 1px rgba(0, 0, 0, 0.1);
     }
 
-    button {
+    input[type=submit] {
       background: $lavender;
       color: #fff;
       padding: 0.5rem 1rem;
