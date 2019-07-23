@@ -1,18 +1,18 @@
 <template>
   <div class="contact page">
-    <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="contact" />
-      <label>Your Name:</label>
-      <input type="text" name="name" />
-
-      <label>Your Email:</label>
-      <input type="email" name="email" />
-
-      <label>Message:</label>
-      <textarea name="message"></textarea>
-
-      <input type="submit" value="Send" name="submit"></input>
-    </form>
+    <h1 class="title">Contact</h1>
+    <div class="content">
+      <form name="contact" action method="post" netlify>
+        <input type="hidden" name="form-name" value="contact" />
+        <label class="form-label" for="name">Name:</label>
+        <input class="form-field" name="name" id="name" />
+        <label class="form-label" for="email">Email:</label>
+        <input class="form-field" name="email" id="email" />
+        <label class="form-label" for="message">Message:</label>
+        <textarea class="form-field" name="message" id="message"></textarea>
+        <input class="form-button" type="submit" value="Send message" />
+      </form>
+    </div>
   </div>
 </template>
 
@@ -52,7 +52,7 @@ export default {};
       border: solid 1px rgba(0, 0, 0, 0.1);
     }
 
-    input[type=submit] {
+    input[type="submit"] {
       background: $lavender;
       color: #fff;
       padding: 0.5rem 1rem;
