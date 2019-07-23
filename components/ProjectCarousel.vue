@@ -7,6 +7,7 @@
       :images="project.images"
     />-->
     <carousel
+      :key="false"
       v-model="value"
       :perPage="1"
       :page-change="currentProject(value)"
@@ -20,7 +21,9 @@
 
     <span v-if="numberOfProjects() === 0">
       Will be adding these soon. In the meantime see
-      <a href="https://razellemccarrick.com/portfolio">my other portfolio site</a>
+      <a
+        href="https://razellemccarrick.com/portfolio"
+      >my other portfolio site</a>
     </span>
   </div>
 </template>

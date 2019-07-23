@@ -32,9 +32,16 @@ export default {
     };
   },
   methods: {
+    updateCarousel() {
+      this.$children[2].$vnode.componentInstance.$children[0].$children[1].$children[0].$forceUpdate();
+    },
+    centerCarousel() {
+      setTimeout(this.updateCarousel, 1000);
+    },
     slideMenu() {
       if (window.innerWidth >= 664) {
         this.slideNav();
+        this.centerCarousel();
       } else {
         this.slideMobileNav();
       }
@@ -44,7 +51,6 @@ export default {
       let margin = nav.style.marginLeft;
 
       if (margin !== `-300px`) {
-        debugger;
         nav.style.marginLeft = `-300px`;
       } else nav.style.marginLeft = "0px";
     },
