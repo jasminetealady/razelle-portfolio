@@ -44,7 +44,7 @@ let projects = [
       'Vue via Vue CLI 3',
       'VueX',
       'Auth0',
-      'Third party libraries IE: VueMQ, vue-tooltips',
+      'Third party libraries IE: vue-mq, vue-tooltips',
       'Embedly',
       'HTML & Sass'
     ],
@@ -58,14 +58,25 @@ let projects = [
     title: 'Nuxt & Prismic Starter Site',
     github: '',
     link: '',
-    technologies: ['Vue', 'Nuxt', 'Prismic', 'VueMQ', 'HTML & Sass'],
-    functionality: `A mobile responsive starter Nuxt and Prismic site. Has a navbar that routes to a /blog page with posts pulled from Prismic's headless API. Comes with a Sass stylesheet and mini UI framework (buttons, modals, forms, and inputs). Can be themed by altering Sass variables and Prismic API endpoint can be swapped with your own. Prismic has a Nuxt starter, but it routes to the index page -- I also added search functionality to the blog posts. This project is intended to be an easy way to get a site with a blog started, particularly if someone would like to blog with a friendly UI or have a non-tech person write blog posts without touching code.`
+    technologies: ['Vue', 'Nuxt', 'Prismic', 'vue-mq', 'HTML & Sass'],
+    functionality: `A mobile responsive starter Nuxt and Prismic site. Has a navbar that routes to a /blog page with posts pulled from Prismic's headless API. Comes with a Sass stylesheet and mini UI framework (buttons, modals, forms, and inputs). Can be themed by altering Sass variables and Prismic API endpoint can be swapped with your own. Prismic has a Nuxt starter, but it routes to the index page -- I also added search functionality to the blog posts. This project is intended to be an easy way to get a site with a blog started, particularly if someone would like to blog with a friendly UI or have a non-tech person write blog posts without touching code.`,
+    notes: '* Will be deploying and updating here soon'
   },
   {
     id: 5,
     category: 'vue',
-    title: 'This Website!',
-    technologies: ['Nuxt', 'Vue', 'HTML & Sass', 'VueMQ']
+    title: 'razelle.design',
+    link: '/',
+    github: 'https://github.com/jasminetealady/razelle-portfolio',
+    technologies: [
+      'Nuxt',
+      'Vue',
+      'HTML & Sass',
+      'vue-mq',
+      'vue-carousel',
+      'Font Awesome'
+    ],
+    functionality: `I created this portfolio site to make my projects more accessible. My previous portfolio site razellemccarrick.com was not only a mouthful domain-wise but had a portfolio page with individual projects you had to click to see information about. I had old Flatiron School blog posts up still, which no one wants to read. Knowing that folks hiring don't want to spend too much time clicking around, I made this site with the hopes that you'll be able to access my projects quickly and hire me! Plus, it was fun.`
   },
   {
     id: 6,

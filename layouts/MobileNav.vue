@@ -12,11 +12,9 @@
         <font-awesome-icon :icon="['fab', 'linkedin']" />
       </a>
 
-      <font-awesome-icon
-        id="about"
-        @click="$router.push('/about'), $emit('exitMobileNav')"
-        :icon="'user-astronaut'"
-      />
+      <a href="#" id="about" @click="$router.push('/about'), $emit('exitMobileNav')">
+        <font-awesome-icon :icon="'user-astronaut'" />
+      </a>
 
       <a id="darkmode" @click="$emit('toggleDarkMode'), mobileNavDark = !mobileNavDark">
         <font-awesome-icon v-if="!darkMode" icon="moon" />
@@ -65,6 +63,7 @@ export default {
   opacity: 0;
   font-family: $mono;
   visibility: hidden;
+  z-index: 2;
 
   svg {
     margin: 1rem 0.5rem;

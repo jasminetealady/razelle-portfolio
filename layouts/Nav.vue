@@ -3,12 +3,7 @@
     <div class="nav-content">
       <!--Profile Photo-->
       <router-link to="/">
-        <img
-          class="profile-pic"
-          @mouseover="$router.push('/about')"
-          @mouseout="$router.push('/')"
-          src="../images/razelle.jpg"
-        />
+        <img class="profile-pic" src="../images/razelle.jpg" />
       </router-link>
 
       <!--Nav Links -->

@@ -5,6 +5,8 @@
     </p>
     <p>
       <a v-if="project.github" :href="project.github" target="_blank">GitHub Link</a>
+    </p>
+    <p>
       <a v-if="project.link" :href="project.link" target="_blank">Link</a>
     </p>
     <p>
@@ -25,12 +27,21 @@
       </ul>
     </div>
     <p v-html="project.notes"></p>
+    <div v-if="project.vimeo" @click="$emit('openVideoModal')" class="button">
+      <font-awesome-icon class="fa-button" icon="video" />
+      <!-- <p>See Video Demo</p> -->
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["project"]
+  props: ["project"],
+  data() {
+    return {
+      videoModalOpen: false
+    };
+  }
 };
 </script>
 
@@ -82,5 +93,19 @@ p {
 
 ul {
   margin: 2rem;
+}
+
+svg {
+  font-size: 28px;
+}
+
+.button {
+  text-align: center;
+  cursor: pointer;
+  margin-top: 4rem;
+}
+
+.button:hover {
+  color: $bubblegum;
 }
 </style>

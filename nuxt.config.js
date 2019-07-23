@@ -35,7 +35,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/fontawesome.js', '~/plugins/vuemq.js'],
+  plugins: [
+    '~/plugins/fontawesome.js',
+    '~/plugins/vuemq.js',
+    '~/plugins/vuecarousel.js'
+  ],
   /*
    ** Nuxt.js modules
    */
