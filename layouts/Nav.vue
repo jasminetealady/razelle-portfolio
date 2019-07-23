@@ -21,7 +21,7 @@
           <font-awesome-icon v-if="!darkMode" icon="moon" />
           <font-awesome-icon v-if="darkMode" icon="cloud-sun" />
         </a>
-        <a id="email" href="mailto:razelle@satyaorthopedic.com">
+        <a id="email" href="mailto:hello@razelle.design">
           <font-awesome-icon icon="envelope" />
         </a>
       </div>
