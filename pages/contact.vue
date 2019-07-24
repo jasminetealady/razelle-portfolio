@@ -1,65 +1,35 @@
 <template>
   <div class="contact page">
-    <template>
-      <form method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact" />
-        <p>
-          <label>
-            Your Name:
-            <input type="text" name="name" v-model="form.name" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Email:
-            <input type="email" name="email" v-model="form.email" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message:
-            <textarea name="message" v-model="form.message" />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
-    </template>
+    <form method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact" />
+      <p>
+        <label>
+          Your Name:
+          <input type="text" name="name" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Your Email:
+          <input type="email" name="email" />
+        </label>
+      </p>
+      <p>
+        <label>
+          Message:
+          <textarea name="message" />
+        </label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
   </div>
 </template>
 
 
 <script>
-export default {
-  data() {
-    return {
-      form: {
-        name: "",
-        email: "",
-        message: ""
-      }
-    };
-  },
-  methods: {
-    encode(data) {
-      return Object.keys(data)
-        .map(
-          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join("&");
-    },
-    handleSubmit() {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: this.encode({ "form-name": "contact", ...this.form })
-      })
-        .then(() => alert("Success!"))
-        .catch(error => alert(error));
-    }
-  }
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
