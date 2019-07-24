@@ -21,9 +21,9 @@
           <font-awesome-icon v-if="!darkMode" icon="moon" />
           <font-awesome-icon v-if="darkMode" icon="cloud-sun" />
         </a>
-        <a id="email" href="mailto:hello@razelle.design">
+        <router-link to="/contact">
           <font-awesome-icon icon="envelope" />
-        </a>
+        </router-link>
       </div>
     </div>
   </nav>
@@ -84,7 +84,7 @@ nav {
   }
 
   #email:hover::after {
-    content: "email me";
+    content: "contact";
     font-size: 14px;
     position: absolute;
     left: 80px;

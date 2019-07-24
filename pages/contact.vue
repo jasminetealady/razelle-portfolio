@@ -2,27 +2,17 @@
   <div class="contact page">
     <form method="post" data-netlify="true" data-netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="contact" />
-      <p>
-        <label>
-          Your Name:
-          <input type="text" name="name" />
-        </label>
-      </p>
-      <p>
-        <label>
-          Your Email:
-          <input type="email" name="email" />
-        </label>
-      </p>
-      <p>
-        <label>
-          Message:
-          <textarea name="message" />
-        </label>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
+
+      <label>Your Name:</label>
+      <input type="text" name="name" />
+
+      <label>Your Email:</label>
+      <input type="email" name="email" />
+
+      <label>Message:</label>
+      <textarea name="message" />
+
+      <button type="submit">Send</button>
     </form>
   </div>
 </template>
@@ -62,9 +52,22 @@ export default {};
       padding: 0.5rem;
       border-radius: 3px;
       border: solid 1px rgba(0, 0, 0, 0.1);
+      font-family: $mono;
+      font-size: 14px;
+      color: $lavender;
     }
 
-    input[type="submit"] {
+    textarea:focus,
+    input:focus,
+    input[type]:focus,
+    .uneditable-input:focus,
+    input:-internal-autofill-selected {
+      border-color: $lavender;
+      box-shadow: 0 1px 1px rgba(255, 255, 255, 0.1) inset, 0 0 8px $lavender;
+      outline: 0 none;
+    }
+
+    button {
       background: $lavender;
       color: #fff;
       padding: 0.5rem 1rem;
@@ -73,6 +76,21 @@ export default {};
       font-size: 16px;
       font-family: $mono;
       margin-top: 2rem;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      border: 1px solid $lavender;
+      -webkit-text-fill-color: $lavender;
+      -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+      transition: background-color 5000s ease-in-out 0s;
     }
   }
 }
