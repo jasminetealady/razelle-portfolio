@@ -1,29 +1,65 @@
 <template>
   <div class="contact page">
-    <form
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      netlify
-    >
-      <input type="hidden" name="form-name" value="contact" />
-      <label>Your Name:</label>
-      <input type="text" name="name" />
-
-      <label>Your Email:</label>
-      <input type="email" name="email" />
-
-      <label>Message:</label>
-      <textarea name="message"></textarea>
-
-      <input type="submit" value="Send" name="submit" />
-    </form>
+    <template>
+      <form>
+        <p>
+          <label>
+            Your Name:
+            <input type="text" name="name" v-model="form.name" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Your Email:
+            <input type="email" name="email" v-model="form.email" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Message:
+            <textarea name="message" v-model="form.message" />
+          </label>
+        </p>
+        <p>
+          <button type="submit" @click.prevent="handleSubmit">Send</button>
+        </p>
+      </form>
+    </template>
+  </div>
+</template>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      form: {
+        name: "",
+        email: "",
+        message: ""
+      }
+    };
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
+    handleSubmit() {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({ "form-name": "contact", ...this.form })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
