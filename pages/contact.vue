@@ -1,7 +1,8 @@
 <template>
   <div class="contact page">
     <template>
-      <form>
+      <form method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
         <p>
           <label>
             Your Name:
@@ -21,7 +22,7 @@
           </label>
         </p>
         <p>
-          <button type="submit" @click.prevent="handleSubmit">Send</button>
+          <button type="submit">Send</button>
         </p>
       </form>
     </template>
