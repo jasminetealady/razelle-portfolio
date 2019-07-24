@@ -1,6 +1,6 @@
 <template>
   <div class="contact page">
-    <form method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+    <form :class="$mq" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="contact" />
 
       <label>Your Name:</label>
@@ -31,6 +31,14 @@ export default {};
     @extend .contact;
     text-align: center;
     width: 500px;
+
+    &.sm {
+      width: 80%;
+    }
+
+    &.md {
+      width: 400px;
+    }
 
     p {
       width: 100%;
