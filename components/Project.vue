@@ -14,9 +14,8 @@
     </p>
     <p v-if="project.functionality">
       <strong>Functionality:</strong>
-      <br />
-      <br />
-      {{project.functionality}}
+      <p v-html="project.functionality"></p>
+     
     </p>
     <p>
       <strong>Technologies Used:</strong>

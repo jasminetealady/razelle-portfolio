@@ -5,6 +5,9 @@
       class="mobile-nav"
       :class="{'mobile-nav-light' : !mobileNavDark, 'mobile-nav-dark' : mobileNavDark}"
     >
+      <a href="#" id="home" @click="$router.push('/'), $emit('exitMobileNav')">
+        <font-awesome-icon icon="home" />
+      </a>
       <a id="github" href="https://www.github.com/jasminetealady" target="_blank">
         <font-awesome-icon :icon="['fab', 'github']" />
       </a>
@@ -13,7 +16,7 @@
       </a>
 
       <a href="#" id="about" @click="$router.push('/about'), $emit('exitMobileNav')">
-        <font-awesome-icon :icon="'user-astronaut'" />
+        <font-awesome-icon icon="user-astronaut" />
       </a>
 
       <a id="darkmode" @click="$emit('toggleDarkMode'), mobileNavDark = !mobileNavDark">

@@ -33,7 +33,7 @@ let projects = [
     ],
     images: [],
     functionality:
-      'Created portfolio with Gatsby, using a local WordPress instance as a back end.'
+      'Recreated <a href="https://razellemccarrick.com">portfolio</a> site with Gatsby, using a local WordPress instance as a back end, writing GraphQL queries to pull necessary data from WordPress, and styling from scratch.'
   },
   {
     id: 3,
@@ -49,11 +49,20 @@ let projects = [
     id: 4,
     category: 'vue',
     title: 'Nuxt & Prismic Starter Site',
-    github: '',
-    link: '',
-    technologies: ['Vue', 'Nuxt', 'Prismic', 'vue-mq', 'HTML & Sass'],
-    functionality: `A mobile responsive starter Nuxt and Prismic site. Has a navbar that routes to a /blog page with posts pulled from Prismic's headless API. Comes with a Sass stylesheet and mini UI framework (buttons, modals, forms, and inputs). Can be themed by altering Sass variables and Prismic API endpoint can be swapped with your own. Prismic has a Nuxt starter, but it routes to the index page -- I also added search functionality to the blog posts. This project is intended to be an easy way to get a site with a blog started, particularly if someone would like to blog with a friendly UI or have a non-tech person write blog posts without touching code.`,
-    notes: '* Will be deploying and updating here soon'
+    github: 'https://github.com/jasminetealady/nuxt-prismic-starter',
+    link: 'https://nuxt-prismic-starter.herokuapp.com',
+    technologies: [
+      'Vue',
+      'Nuxt',
+      'Prismic',
+      'vue-mq',
+      'HTML & Sass',
+      'Server Side Rendering',
+      'Heroku'
+    ],
+    functionality: `A modified Nuxt and Prismic CLI starter. Uses Prismic API endpoint to pull blog posts and individual posts. Original starter sets blog index to home page. I added a navbar that routes to Home, About, Blog, and Components. I moved the blog index page to a /blog route and implemented search functionality. Additionally, I created a Sass stylesheet and mini UI framework that includes classes for flexbox and spacing, as well as styled modals, buttons, inputs, and forms. Can be themed by changing Sass variables and Prismic API endpoint can be swapped out for your own.`,
+    notes:
+      '* Must be deployed to Heroku, as it is server side rendered. Still working on and refactoring it.<br/><br/><p>Original Starter Guide: <a href="https://user-guides.prismic.io/en/articles/2802125-create-a-sample-blog-with-prismic-and-nuxt">Nuxt and Prismic CLI Sample Blog</a></p>'
   },
   {
     id: 5,
