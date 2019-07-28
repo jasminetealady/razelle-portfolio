@@ -14,9 +14,9 @@
     </p>
     <p v-if="project.functionality">
       <strong>Functionality:</strong>
-      <p v-html="project.functionality"></p>
-     
     </p>
+    <p v-html="project.functionality"></p>
+
     <p>
       <strong>Technologies Used:</strong>
     </p>
@@ -26,6 +26,9 @@
       </ul>
     </div>
     <p v-html="project.notes"></p>
+    <div v-if="project.images" class="project-images">
+      <img v-for="image in project.images" :src="image" />
+    </div>
     <div v-if="project.vimeo" @click="$emit('openVideoModal')" class="button">
       <font-awesome-icon class="fa-button" icon="video" />
       <!-- <p>See Video Demo</p> -->
@@ -67,6 +70,17 @@ export default {
 .title {
   text-align: center;
   font-size: 22px;
+}
+
+.project-images {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+
+img {
+  width: 300px;
 }
 
 a {

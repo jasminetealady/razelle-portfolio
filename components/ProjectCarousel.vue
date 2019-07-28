@@ -9,7 +9,7 @@
     <carousel
       :key="false"
       v-model="value"
-      :perPage="1"
+      :per-page="1"
       :page-change="currentProject(value)"
       paginationActiveColor="#9292ef"
       paginationColor="rgba(146, 146, 239, 0.29)"
@@ -40,8 +40,7 @@ export default {
     return {
       videoModalOpen: false,
       projects: projects.projects,
-      project: {},
-      value: 0
+      project: {}
     };
   },
   computed: {
@@ -63,10 +62,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .VueCarousel-slide {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: inherit;
 }
 
 .portfolio-content-wrapper {

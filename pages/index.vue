@@ -2,11 +2,12 @@
   <div class="home page">
     <ProjectNav @currentTab="setCurrentTab($event)" />
 
-    <ProjectCarousel value="0" :currentTab="currentTab" v-if="currentTab === 'react'" />
-    <ProjectCarousel value="0" :currentTab="currentTab" v-if="currentTab === 'vue'" />
-    <ProjectCarousel value="0" :currentTab="currentTab" v-if="currentTab === 'ruby'" />
-    <ProjectCarousel value="0" :currentTab="currentTab" v-if="currentTab === 'js'" />
-    <ProjectCarousel value="0" :currentTab="currentTab" v-if="currentTab === 'css'" />
+    <ProjectCarousel :value="0" :currentTab="currentTab" v-if="currentTab === 'react'" />
+    <ProjectCarousel :value="0" :currentTab="currentTab" v-if="currentTab === 'vue'" />
+    <ProjectCarousel :value="0" :currentTab="currentTab" v-if="currentTab === 'ruby'" />
+    <ProjectCarousel :value="0" :currentTab="currentTab" v-if="currentTab === 'js'" />
+    <!-- <ProjectCarousel value="0" :currentTab="currentTab" v-if="currentTab === 'css'" /> -->
+    <ProjectCarousel :value="0" :currentTab="currentTab" v-if="currentTab === 'ecommerce'" />
   </div>
 </template>
 

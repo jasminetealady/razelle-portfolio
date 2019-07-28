@@ -1,6 +1,6 @@
 <template>
   <div :class="[$mq, {'app-dark' : darkMode, 'app-light' : !darkMode}]" class="app-container">
-    <div id="sparkles" class="byline">
+    <div v-if="$mq === 'sm'" id="sparkles" class="byline">
       <img @click="slideMenu()" src="../images/sparkles_blurple.png" />
     </div>
 
@@ -33,7 +33,8 @@ export default {
   },
   methods: {
     updateCarousel() {
-      this.$children[2].$vnode.componentInstance.$children[0].$children[1].$children[0].$forceUpdate();
+      let carousel = this.$children[2].$vnode.componentInstance.$children[0].$children[1].$children[0]
+      carousel.$forceUpdate()
     },
     centerCarousel() {
       setTimeout(this.updateCarousel, 1000);

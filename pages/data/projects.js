@@ -43,7 +43,7 @@ let projects = [
     technologies: [`Can't disclose`],
     functionality:
       'Speakfully is a documentation platform for documenting sexual harassment, bias, and other forms of mistreatment in the workplace. The product provides the ability to create folders and within those folders create log entries with information about your experience. You can create, edit, and delete log entries, as well as open up existing log entries.',
-    notes: `<p>In my previous role as a Software Engineer at Speakfully, I built the static website and product front end following designs provided by an external design agency as well as internal UI/UX designer. I worked closely with a back end developer to pull and display user data, as well as implemented user authorization.</p><br/><p>On May 12th 2019, we launched our MVP on a tight deadline.</p>`
+    notes: `<p>In my previous role as a Software Engineer at Speakfully, I built the static website and product front end following designs provided by an external design agency as well as internal UI/UX designer. I worked closely with a back end developer to pull and display user data, as well as implemented user authorization.</p><br/><p>On May 12th 2019, we launched our MVP on a tight deadline.</p>`,
   },
   {
     id: 4,
@@ -122,6 +122,54 @@ let projects = [
       'A Ruby CLI and published Ruby gem that scrapes from the Rishi Tea website and allows users to view teas based on their caffeine level preferences as well as other criteria. They may choose a tea at random or select their own and add it to a cart, which they can view later.',
     notes:
       'Gem and CLI are now deprecated as Rishi did a full site redesign and this project was created for Flatiron School. Please see video demo.'
+  },
+  {
+    id: 9,
+    category: 'ecommerce',
+    title: 'Shopify Custom Theme',
+    link: 'http://razelle-site.myshopify.com',
+    functionality:
+      'Created custom theme via the Shopify Skeleton Theme, the most bare bones starter available.',
+    technologies: ['Shopify', 'Liquid', 'HTML & Sass']
+  },
+  {
+    id: 10,
+    category: 'js',
+    title: 'Type Checker',
+    link: 'https://type-checker-67.superhi.com/',
+    functionality:
+      'This is a Type Checker app I built through SuperHi’s JavaScript for Designers Course. It uses vanilla JavaScript to listen for input events and change the text in the main section, a textarea, accordingly. The text can be changed from the text area in the body or the input in the panel. Changes to both are reflected in the other. From each input, we grab the value of the input when the user changes it and assign that value to the style element of the text in question (font-family, font-size, font-weight, line-height, background-color, and color respectively).',
+    technologies: ['Vanilla JavaScript', 'HTML & CSS'],
+    images: [require(`./typechecker.png`)]
+  },
+  {
+    id: 11,
+    category: 'js',
+    title: 'Slide Menu & Photo Fan Out',
+    link: 'https://plant-life-83.superhi.com/#',
+    technologies: ['Vanilla JavaScript', 'HTML & CSS'],
+    functionality:
+      'This is a project I built in my JavaScript for Designers course. It features an initial image which when moused over fans out other images that can be clicked to make them appear on top. It also features a nav menu that slides in and can be shown and hidden with a click. Made with vanilla JavaScript and mouseover/click events.',
+    images: [require(`./photofanout.png`)]
+  },
+  {
+    id: 12,
+    category: 'js',
+    title: 'Slideshow',
+    technologies: ['Vanilla JavaScript', 'HTML & CSS'],
+    link: 'https://rose-culver-112.superhi.com/',
+    functionality:
+      'Here is a project I built in my JavaScript for Designers course. It features click events on the previous, next, and random icons that change the content and styles of elements on the page using vanilla JavaScript.',
+    images: [require(`./roseculver.png`)]
+  },
+  {
+    id: 13,
+    category: 'css',
+    title: 'Portfolio Concept',
+    link: 'https://avelineamour.github.io/portfolio/',
+    technologies: ['HTML & CSS', 'CodeKit'],
+    functionality: 'A responsive portfolio concept site',
+    images: []
   }
 ];
 
