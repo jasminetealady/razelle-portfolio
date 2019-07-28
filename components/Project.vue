@@ -64,6 +64,15 @@ export default {
   &.md,
   &.sm {
     width: 90%;
+    font-size: 14px;
+
+    .title {
+      font-size: 18px;
+    }
+
+    svg {
+      font-size: 20px;
+    }
   }
 }
 

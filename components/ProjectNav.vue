@@ -21,7 +21,7 @@ export default {
         { id: 2, title: "vue.js", dataName: "vue" },
         { id: 3, title: "ruby, sinatra & rails", dataName: "ruby" },
         { id: 4, title: "vanilla javascript", dataName: "js" },
-        // { id: 5, title: "html & css/scss", dataName: "css" },
+        { id: 5, title: "professional", dataName: "professional" },
         { id: 6, title: "e-commerce", dataName: "ecommerce" }
       ],
       react: true,
@@ -74,6 +74,11 @@ nav {
     cursor: pointer;
   }
   &.lg {
+    width: 100%;
+  }
+
+  &.sm {
+    font-size: 14px;
     width: 100%;
   }
 }

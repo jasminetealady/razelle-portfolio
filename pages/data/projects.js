@@ -37,7 +37,7 @@ let projects = [
   },
   {
     id: 3,
-    category: 'vue',
+    category: 'professional',
     title: 'Speakfully',
     link: 'https://speakfully.com',
     technologies: [`Can't disclose`],

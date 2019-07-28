@@ -8,6 +8,7 @@
     <ProjectCarousel :value="0" :currentTab="currentTab" v-if="currentTab === 'js'" />
     <!-- <ProjectCarousel value="0" :currentTab="currentTab" v-if="currentTab === 'css'" /> -->
     <ProjectCarousel :value="0" :currentTab="currentTab" v-if="currentTab === 'ecommerce'" />
+    <ProjectCarousel :value="0" :currentTab="currentTab" v-if="currentTab === 'professional'" />
   </div>
 </template>
 
