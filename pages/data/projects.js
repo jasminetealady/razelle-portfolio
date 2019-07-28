@@ -130,7 +130,8 @@ let projects = [
     link: 'http://razelle-site.myshopify.com',
     functionality:
       'Created custom theme via the Shopify Skeleton Theme, the most bare bones starter available.',
-    technologies: ['Shopify', 'Liquid', 'HTML & Sass']
+    technologies: ['Shopify', 'Liquid', 'HTML & Sass'],
+    images: [require(`./shopify.png`)]
   },
   {
     id: 10,
