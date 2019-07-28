@@ -23,9 +23,9 @@
         <font-awesome-icon v-if="!darkMode" icon="moon" />
         <font-awesome-icon v-if="darkMode" icon="cloud-sun" />
       </a>
-      <router-link id="email" to="/contact">
+      <a id="email" href="#" @click="$router.push('/contact'), $emit('exitMobileNav')">
         <font-awesome-icon icon="envelope" />
-      </router-link>
+      </a>
     </nav>
   </mq-layout>
 </template>

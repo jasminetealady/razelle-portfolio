@@ -64,7 +64,7 @@ export default {
   &.md,
   &.sm {
     width: 90%;
-    font-size: 14px;
+    font-size: $mobilefontsize;
 
     .title {
       font-size: 18px;

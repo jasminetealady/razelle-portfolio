@@ -69,6 +69,7 @@ export default {};
 
     &.sm {
       margin-top: 4rem;
+      font-size: $mobilefontsize;
     }
 
     a {
