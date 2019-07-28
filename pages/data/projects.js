@@ -3,7 +3,7 @@ let projects = [
     id: 1,
     category: 'react',
     title: 'Vote 2018',
-    heroku: 'https://luxe-boutique.herokuapp.com',
+    heroku: 'https://vote2018.herokuapp.com/',
     technologies: [
       'React',
       'Redux',
