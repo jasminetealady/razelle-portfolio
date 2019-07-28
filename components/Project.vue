@@ -86,10 +86,12 @@ export default {
   justify-content: space-around;
   flex-wrap: wrap;
   padding-top: 1rem;
+  height: 200px;
 }
 
 img {
   width: 300px;
+  object-fit: contain;
 }
 
 a {
