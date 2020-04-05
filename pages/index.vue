@@ -1,44 +1,35 @@
 <template>
-  <div class="home page">
-    <ProjectNav @currentTab="setCurrentTab($event)" />
+  <div class="Index">
+    <Sidebar />
 
-    <ProjectCarousel :value="0" :currentTab="currentTab" v-if="currentTab === 'react'" />
-    <ProjectCarousel :value="0" :currentTab="currentTab" v-if="currentTab === 'vue'" />
-    <ProjectCarousel :value="0" :currentTab="currentTab" v-if="currentTab === 'ruby'" />
-    <ProjectCarousel :value="0" :currentTab="currentTab" v-if="currentTab === 'js'" />
-    <!-- <ProjectCarousel value="0" :currentTab="currentTab" v-if="currentTab === 'css'" /> -->
-    <ProjectCarousel :value="0" :currentTab="currentTab" v-if="currentTab === 'ecommerce'" />
-    <ProjectCarousel :value="0" :currentTab="currentTab" v-if="currentTab === 'professional'" />
+    <main class="page">
+      <MyWork />
+      <PersonalProjects />
+    </main>
   </div>
 </template>
 
 <script>
-import ProjectCarousel from "../components/ProjectCarousel.vue";
-import ProjectNav from "../components/ProjectNav.vue";
+import Sidebar from '@/components/Sidebar'
+import MyWork from '@/components/MyWork'
+import PersonalProjects from '@/components/PersonalProjects'
 
 export default {
-  data() {
-    return {
-      currentTab: "react"
-    };
-  },
-  methods: {
-    setCurrentTab(currentTab) {
-      this.currentTab = currentTab;
-    }
-  },
-  components: {
-    ProjectNav,
-    ProjectCarousel
-  }
-};
+  components: { Sidebar, MyWork, PersonalProjects }
+}
 </script>
 
-<style scoped lang="scss">
-@import "~/assets/css/variables.scss";
+<style lang="scss">
+@import '../assets/scss/_variables.scss';
+@import '../assets/scss/_breakpoints.scss';
 
-.home {
-  align-items: center;
-  padding-bottom: 4rem;
+.Index {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+
+  @include sm() {
+    flex-direction: column;
+  }
 }
 </style>

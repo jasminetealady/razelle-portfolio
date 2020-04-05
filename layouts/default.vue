@@ -1,131 +1,71 @@
 <template>
-  <div :class="[$mq, {'app-dark' : darkMode, 'app-light' : !darkMode}]" class="app-container">
-    <div v-if="$mq === 'sm'" id="sparkles" class="byline">
-      <img @click="slideMenu()" src="../images/sparkles_blurple.png" />
-    </div>
+  <div class="AppWrapper">
+    <nav class="NameNav">
+      <h1>Razelle McCarrick</h1>
+      <div class="HamburgerIcon">
+        <font-awesome-icon @click="showNav" :icon="['fa', 'bars']" />
+      </div>
+    </nav>
 
-    <Nav ref="navbar" :darkMode="darkMode" @toggleDarkMode="darkMode = !darkMode" />
-
-    <MobileNav
-      ref="mobilenav"
-      :darkMode="darkMode"
-      @exitMobileNav="slideMobileNav()"
-      @toggleDarkMode="darkMode = !darkMode"
-    />
-
-    <!-- <footer>
-      <span>built with nuxt © razelle 2019</span>&#x1F497
-    </footer>-->
+    <MobileMenu ref="mobileMenu" />
     <nuxt />
   </div>
 </template>
 
 <script>
-import Nav from "./Nav.vue";
-import MobileNav from "./MobileNav.vue";
+import MobileMenu from '@/components/MobileMenu'
 
 export default {
-  components: { Nav, MobileNav },
-  data() {
-    return {
-      darkMode: false
-    };
-  },
+  components: { MobileMenu },
+  data: () => ({}),
   methods: {
-    updateCarousel() {
-      let carousel = this.$children[2].$vnode.componentInstance.$children[0].$children[1].$children[0]
-      carousel.$forceUpdate()
-    },
-    centerCarousel() {
-      setTimeout(this.updateCarousel, 1000);
-    },
-    slideMenu() {
-      if (window.innerWidth >= 664) {
-        this.slideNav();
-        this.centerCarousel();
-      } else {
-        this.slideMobileNav();
-      }
-    },
-    slideNav() {
-      let nav = this.$refs.navbar.$el;
-      let margin = nav.style.marginLeft;
-
-      if (margin !== `-300px`) {
-        nav.style.marginLeft = `-300px`;
-      } else nav.style.marginLeft = "0px";
-    },
-    slideMobileNav() {
-      let mobilenav = this.$refs.mobilenav.$el.firstChild;
-      let opacity = mobilenav.style.opacity;
-      if (opacity !== "1") {
-        mobilenav.style.visibility = "visible";
-        mobilenav.style.opacity = "1";
-      } else {
-        mobilenav.style.opacity = "0";
-        mobilenav.style.visibility = "hidden";
-      }
+    showNav() {
+      this.$refs.mobileMenu.$refs.mobileMenu.style.transform = `translateX(0%)`
     }
   }
-};
+}
 </script>
 
-<style scoped lang="scss">
-@import "~/assets/css/variables.scss";
+<style lang="scss">
+@import '../assets/scss/_variables.scss';
+@import '../assets/scss/_breakpoints.scss';
 
-.app-container {
+.AppWrapper {
   display: flex;
+  flex-direction: column;
   width: 100%;
 
-  &.sm {
-    flex-direction: column;
-  }
-}
+  .NameNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $light;
+    padding: 48px 16px;
 
-.app-light {
-  background: rgba(232, 232, 250, 0.61);
-}
-
-.app-dark {
-  background-color: $dark;
-}
-
-#sparkles {
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-
-  span {
-    margin-left: 1rem;
-    color: $navtext;
-    font-family: $mono;
-    font-size: 16px;
-    &.md,
-    &.sm {
-      display: none;
+    @include sm() {
+      padding: 24px 16px;
     }
-  }
 
-  img {
-    width: 20px;
-    height: 20px;
-  }
-}
+    .HamburgerIcon {
+      display: none;
 
-footer {
-  position: absolute;
-  bottom: 0px;
-  right: 0;
-  padding: 1rem;
-  color: $navtext;
-  font-family: $mono;
-  font-size: 12px;
-  span {
-    margin-right: 1rem;
+      @include sm() {
+        display: block;
+        color: lighten($dark, 10%);
+        cursor: pointer;
+        height: 100%;
+        width: auto;
+        padding: 16px;
+      }
+    }
+
+    h1 {
+      min-width: 350px;
+      width: 350px;
+      text-transform: uppercase;
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
   }
 }
 </style>

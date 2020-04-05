@@ -7,7 +7,9 @@ import {
   faCloudSun,
   faUserAstronaut,
   faEnvelope,
-  faHome
+  faHome,
+  faBars,
+  faTimes
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
@@ -16,7 +18,7 @@ config.autoAddCss = false;
 
 // You can add your icons directly in this plugin. See other examples for how you
 // can add other styles or just individual icons.
-library.add(faVideo, faMoon, faCloudSun, faUserAstronaut, faEnvelope, faHome);
+library.add(faVideo, faMoon, faCloudSun, faUserAstronaut, faEnvelope, faBars, faHome, faTimes);
 library.add(faGithub, faLinkedin);
 
 // Register the component globally

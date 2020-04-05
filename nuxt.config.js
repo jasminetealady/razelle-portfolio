@@ -5,7 +5,7 @@ export default {
    */
   head: {
     // title: process.env.npm_package_name || '',
-    title: `razelle's front end portfolio`,
+    title: `Razelle McCarrick -- Front End Developer`,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -25,20 +25,14 @@ export default {
    ** Global CSS
    */
   css: [
-    // Load a Node.js module directly (here it's a Sass file)
-    // CSS file in the project
-    '@/assets/css/reset.css',
-    // SCSS file in the project
-    '@/assets/css/main.scss',
-    '@fortawesome/fontawesome-svg-core/styles.css'
+    '@fortawesome/fontawesome-svg-core/styles.css',
+    '@/assets/scss/app.scss',
   ],
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
     '~/plugins/fontawesome.js',
-    '~/plugins/vuemq.js',
-    '~/plugins/vuecarousel.js'
   ],
   /*
    ** Nuxt.js modules

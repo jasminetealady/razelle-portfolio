@@ -1,135 +1,74 @@
 <template>
-  <div :class="$mq" class="portfolio-content">
-    <p class="title">
-      <strong>{{ project.title }}</strong>
-    </p>
-    <p>
-      <a v-if="project.github" :href="project.github" target="_blank">GitHub Link</a>
-    </p>
-    <p>
-      <a v-if="project.link" :href="project.link" target="_blank">Link</a>
-    </p>
-    <p>
-      <a v-if="project.heroku" :href="project.heroku" target="_blank">Heroku Link</a>
-    </p>
-    <p v-if="project.functionality">
-      <strong>Functionality:</strong>
-    </p>
-    <p v-html="project.functionality"></p>
-
-    <p>
-      <strong>Technologies Used:</strong>
-    </p>
-    <div>
-      <ul>
-        <li :key="tech" v-for="tech in project.technologies">{{tech}}</li>
-      </ul>
+  <div class="Project">
+    <div class="Clickable">
+      <a :href="projectUrl" target="_blank">
+        <h4>{{title}}</h4>
+        <p class="Position">{{position}}</p>
+        <p>{{text}}</p>
+      </a>
     </div>
-    <p v-html="project.notes"></p>
-    <div v-if="project.images" class="project-images">
-      <img v-for="image in project.images" :src="image" />
-    </div>
-    <div v-if="project.vimeo" @click="$emit('openVideoModal')" class="button">
-      <font-awesome-icon class="fa-button" icon="video" />
-      <!-- <p>See Video Demo</p> -->
-    </div>
+    <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["project"],
-  data() {
-    return {
-      videoModalOpen: false
-    };
-  }
-};
+  props: ['title', 'text', 'projectUrl', 'position']
+}
 </script>
 
-<style lang="scss" scoped>
-@import "~/assets/css/variables.scss";
+<style lang="scss">
+@import '../assets/scss/_variables.scss';
+@import '../assets/scss/breakpoints.scss';
 
-.portfolio-content {
-  padding: 1rem;
-  width: 70%;
-  font-size: 16px;
-  line-height: 1.2;
-  margin-top: 2rem;
-
-  &.lg {
-    width: 80%;
-  }
-
-  &.md,
-  &.sm {
-    width: 90%;
-    font-size: $mobilefontsize;
-
-    .title {
-      font-size: 18px;
-    }
-
-    svg {
-      font-size: 20px;
-    }
+.Project:first-of-type {
+  @include sm() {
+    margin-bottom: 80px;
   }
 }
 
-.title {
-  text-align: center;
-  font-size: 22px;
-}
-
-.project-images {
+.Project {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding-top: 1rem;
-  height: 200px;
-}
-
-img {
-  width: 300px;
-  object-fit: contain;
-}
-
-a {
-  color: $bubblegum;
-  border-bottom: solid 1px $bubblegum;
-  padding-bottom: 0.25rem;
-  display: inline-block;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   text-decoration: none;
-}
+  max-width: 300px;
+  margin-bottom: 88px;
 
-strong {
-  color: $bubblegum;
-}
+  @include sm() {
+    max-width: 90%;
+    margin-bottom: 0px;
+  }
 
-a:hover {
-  color: $lavender;
-  border-bottom: solid 1px $lavender;
-}
+  .Clickable {
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
 
-p {
-  margin-bottom: 1rem;
-}
+  h4,
+  h1 {
+    width: 100%;
+    border-bottom: $border;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    font-weight: bold;
+    color: lighten($dark, 20%);
+  }
 
-ul {
-  margin: 2rem;
-}
+  p {
+    font-family: Lato;
+    font-size: 16px;
 
-svg {
-  font-size: 28px;
-}
+    @include sm() {
+      font-size: 14px;
+    }
+  }
 
-.button {
-  text-align: center;
-  cursor: pointer;
-  margin-top: 4rem;
-}
-
-.button:hover {
-  color: $bubblegum;
+  .Position {
+    font-weight: 900;
+  }
 }
 </style>
