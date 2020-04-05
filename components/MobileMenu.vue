@@ -47,7 +47,7 @@ export default {
   background: $dark;
   position: fixed;
   overflow-y: hidden;
-  padding: 24px 16px;
+  padding: 24px 16px 64px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
