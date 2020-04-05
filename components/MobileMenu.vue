@@ -31,11 +31,11 @@ export default {
   methods: {
     hideNav() {
       this.$refs.mobileMenu.style.transform = `translateX(-100%)`
-      document.querySelector('body').style.overflowY = 'visible'
+      // document.querySelector('body').style.overflowY = 'visible'
     }
   },
   beforeDestroy() {
-    document.querySelector('body').style.overflow = 'visible'
+    // document.querySelector('body').style.overflow = 'visible'
   }
 }
 </script>
