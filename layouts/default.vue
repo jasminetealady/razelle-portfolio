@@ -20,6 +20,7 @@ export default {
   data: () => ({}),
   methods: {
     showNav() {
+      document.querySelector('body').style.overflow = 'hidden'
       this.$refs.mobileMenu.$refs.mobileMenu.style.transform = `translateX(0%)`
     }
   }

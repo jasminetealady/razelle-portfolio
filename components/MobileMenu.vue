@@ -30,6 +30,7 @@ export default {
   components: { Me, Tech },
   methods: {
     hideNav() {
+      document.querySelector('body').style.overflow = 'visible'
       this.$refs.mobileMenu.style.transform = `translateX(-100%)`
     }
   }
