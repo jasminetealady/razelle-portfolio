@@ -21,6 +21,7 @@ export default {
   methods: {
     showNav() {
       this.$refs.mobileMenu.$refs.mobileMenu.style.transform = `translateX(0%)`
+      document.querySelector('body').style.overflowY = 'hidden'
     }
   }
 }
@@ -37,6 +38,7 @@ export default {
 
   .NameNav {
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     background: $light;
@@ -55,7 +57,7 @@ export default {
         cursor: pointer;
         height: 100%;
         width: auto;
-        padding: 16px;
+        // padding: 16px;
       }
     }
 
@@ -65,6 +67,13 @@ export default {
       text-transform: uppercase;
       font-size: 24px;
       letter-spacing: 2px;
+
+      @include sm() {
+        min-width: 0;
+        max-width: 50%;
+        line-height: 1.2;
+        font-size: 24px;
+      }
     }
   }
 }

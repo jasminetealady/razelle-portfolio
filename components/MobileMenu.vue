@@ -29,12 +29,13 @@ import Tech from '@/components/Tech'
 export default {
   components: { Me, Tech },
   methods: {
-    showNav() {
-      this.$refs.mobileMenu.style.transform = `translateX(0%)`
-    },
     hideNav() {
       this.$refs.mobileMenu.style.transform = `translateX(-100%)`
+      document.querySelector('body').style.overflowY = 'visible'
     }
+  },
+  beforeDestroy() {
+    document.querySelector('body').style.overflow = 'visible'
   }
 }
 </script>
@@ -45,12 +46,13 @@ export default {
 .MobileMenu {
   background: $dark;
   position: absolute;
+  overflow-y: hidden;
   padding: 24px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 100vh;
+  min-height: 100%;
   top: 0;
   left: 0;
   width: 100%;
