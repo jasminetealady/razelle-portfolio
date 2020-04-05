@@ -42,7 +42,7 @@ export default {
 
 .MobileMenu {
   background: $dark;
-  position: fixed;
+  position: absolute;
   padding: 24px 16px 64px 16px;
   display: flex;
   flex-direction: column;
