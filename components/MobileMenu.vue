@@ -41,8 +41,7 @@ export default {
 
 .MobileMenu {
   background: $dark;
-  position: absolute;
-  overflow-y: hidden;
+  position: fixed;
   padding: 24px 16px 64px 16px;
   display: flex;
   flex-direction: column;
