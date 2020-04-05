@@ -21,7 +21,6 @@ export default {
   methods: {
     showNav() {
       this.$refs.mobileMenu.$refs.mobileMenu.style.transform = `translateX(0%)`
-      // document.querySelector('body').style.overflowY = 'hidden'
     }
   }
 }

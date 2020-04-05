@@ -31,11 +31,7 @@ export default {
   methods: {
     hideNav() {
       this.$refs.mobileMenu.style.transform = `translateX(-100%)`
-      // document.querySelector('body').style.overflowY = 'visible'
     }
-  },
-  beforeDestroy() {
-    // document.querySelector('body').style.overflow = 'visible'
   }
 }
 </script>
@@ -52,7 +48,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 100%;
   height: 100%;
   top: 0;
   left: 0;
