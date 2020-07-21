@@ -3,17 +3,17 @@
     <h1>projects</h1>
     <div class="wrapper">
       <Project
-        title="gatsby portfolio site"
+        title="gatsby"
         text="A Gatsby recreation of razellemccarrick.com using WordPress as a back end with GraphQL."
         :projectUrl="'https://razelle.netlify.app'"
       />
       <Project
-        title="prismic blog"
+        title="prismic"
         text="A simple blog site that pulls posts from Prismic's headless CMS."
         :projectUrl="'https://razelle-prismic.herokuapp.com/'"
       />
       <Project
-        title="storyblok site demo"
+        title="storyblok"
         text="A demo site that pulls from the Storyblok CMS."
         :projectUrl="'https://storyblok-demo.herokuapp.com/'"
       />
