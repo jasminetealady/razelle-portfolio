@@ -4,20 +4,19 @@
     <div class="wrapper">
       <Project
         :title="'savvy apps'"
-        :text="`Savvy Apps is an Award-Winning App Development and Design Agency that works with clients such as Levi's...`"
+        :text="
+          `Savvy Apps is an Award-Winning App Development and Design Agency that works with clients such as Levi's...`
+        "
         :projectUrl="'https://savvyapps.com'"
         imgUrl="savvy"
         position="App Developer"
       >
-        <a
-          class="CaseStudy"
-          href="https://savvyapps.com/work/levis"
-          target="_blank"
-        >Levi's Case Study</a>
       </Project>
       <Project
         :title="'speakfully'"
-        :text="'Speakfully is a private documentation platform that empowers and supports people and organizations to confidently navigate uncomfortable situations in the workplace ...'"
+        :text="
+          'Speakfully is a private documentation platform that empowers and supports people and organizations to confidently navigate uncomfortable situations in the workplace ...'
+        "
         :projectUrl="'https://speakfully.com'"
         imgUrl="speakfully"
         position="Software Engineer"
@@ -27,15 +26,15 @@
 </template>
 
 <script>
-import Project from '@/components/Project'
+import Project from "@/components/Project";
 export default {
   components: { Project }
-}
+};
 </script>
 
 <style lang="scss">
-@import '../assets/scss/_variables.scss';
-@import '../assets/scss/breakpoints.scss';
+@import "../assets/scss/_variables.scss";
+@import "../assets/scss/breakpoints.scss";
 
 .MyWork {
   width: 100%;
@@ -86,4 +85,3 @@ export default {
   }
 }
 </style>
-
