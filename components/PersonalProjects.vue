@@ -3,18 +3,42 @@
     <h1>projects</h1>
     <div class="wrapper">
       <Project
-        :title="'voter dash'"
-        :text="`Voter dash is a voter information app with a custom API that provides information on voter registration deadlines and the website to check voter registration in the user's state. It also implements the Google Civic Info API to provide data on active elections. I created this app with the intention to help voters access data about their elections more readily in a user friendly environment.`"
-        :projectUrl="'https://voter-info.netlify.com'"
+        title="shahid buttar"
+        text="A concept redesign of Shahid Buttar's campaign website."
+        :projectUrl="'https://shahid-buttar.netlify.app'"
+      />
+      <Project
+        title="voter dash"
+        text="
+          A voter information app with a custom API that provides information on voter registration deadlines and the website to check voter registration in the user's state.
+        "
+        :projectUrl="'https://voter-info.netlify.app'"
+      />
+      <Project
+        title="prismic blog"
+        text="A simple blog site that pulls posts from Prismic's headless CMS."
+        :projectUrl="'https://razelle-prismic.herokuapp.com/'"
+      />
+      <Project
+        title="storyblok site demo"
+        text="A demo site that pulls from the Storyblok CMS."
+        :projectUrl="'https://storyblok-demo.herokuapp.com/'"
       />
     </div>
   </section>
 </template>
 
 <script>
-import Project from '@/components/Project'
+import Project from "@/components/Project";
 export default {
   components: { Project }
-}
+};
 </script>
 
+<style lang="scss">
+.MyWork {
+  .Project {
+    margin-bottom: 48px;
+  }
+}
+</style>

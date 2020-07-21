@@ -12,24 +12,26 @@
 </template>
 
 <script>
-import Me from '@/components/Me'
-import Tech from '@/components/Tech'
-import Contact from '@/components/Contact'
+import Me from "@/components/Me";
+import Tech from "@/components/Tech";
+import Contact from "@/components/Contact";
 export default {
   components: { Me, Tech, Contact }
-}
+};
 </script>
 
 <style lang="scss">
-@import '../assets/scss/_variables.scss';
-@import '../assets/scss/breakpoints.scss';
+@import "../assets/scss/_variables.scss";
+@import "../assets/scss/breakpoints.scss";
 
 .Sidebar {
+  min-height: 100vh;
   min-width: 350px;
   width: 350px;
 
   @include sm() {
     width: 100%;
+    min-height: initial;
   }
 
   .Intro {
@@ -50,7 +52,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    height: 100%;
 
     @include sm() {
       display: none;
@@ -58,4 +60,3 @@ export default {
   }
 }
 </style>
-
