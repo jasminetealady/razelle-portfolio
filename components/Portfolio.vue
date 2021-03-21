@@ -79,7 +79,7 @@
 
       <Project
         title="cover letter builder"
-        text="I try to be thoughtful and unique about my cover letters when applying to jobs. The programmer in me thought, why not automate this, while leaving open the ability to be flexible and address certain recurring themes. This is a freely editable but templated cover letter builder I created"
+        text="I try to be thoughtful and unique about my cover letters when applying to jobs. The programmer in me thought, why not automate this, while leaving open the ability to be flexible and address certain recurring themes. This is a freely editable but templated cover letter builder I created."
         :projectUrl="'https://cover-letter-builder.netlify.app'"
         :image="require('../assets/images/cover-letter.png')"
       />
