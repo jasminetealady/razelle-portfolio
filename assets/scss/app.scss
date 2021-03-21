@@ -1,12 +1,12 @@
-@import 'variables';
-@import 'reset';
-@import 'toggleswitch';
-@import 'fonts';
-@import 'breakpoints';
+@import "variables";
+@import "reset";
+@import "toggleswitch";
+@import "fonts";
+@import "breakpoints";
 
-
-body, html  {
-  font-family: LeagueSpartan;
+body,
+html {
+  font-family: Audrey;
   height: 100%;
   width: 100%;
   background: $light;
@@ -19,131 +19,54 @@ body {
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 p {
-  font-family: 'Lato';
+  font-family: "Lato";
+  line-height: 2;
+  color: lighten($dark, 20%);
 }
-
-
 
 .page {
   display: flex;
   margin: 0 auto;
-  align-items: flex-start;
+  justify-content: center;
   width: 100%;
-  min-height: 100vh;
   max-width: 1200px;
-  padding-left: 96px;
-
-  @include md() {
-    flex-direction: column;
-  }
+  padding: 0 24px;
 
   @include sm() {
-    padding-left: 16px;
+    padding: 0 16px;
   }
 }
 
-h1 {
-  font-size: 48px;
-  font-weight: bold;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: lighten($dark, 20%);
-}
-
-h2 {
-  font-size: 40px;
-}
-
-h3 {
-  font-size: 32px;
-}
-
-h4 {
-  font-size: 24px;
-
-  @include sm() {
-    font-size: 16px;
-  }
+  font-weight: 500;
 }
 
 strong {
   font-weight: bold;
 }
 
-
 a {
   text-decoration: none;
-  color: #484b6f;
+  color: $secondary;
 
   &:hover {
-    color: lighten(#484b6f, 10%);
+    color: lighten($secondary, 10%);
   }
 
   &:visited {
-    color: #484b6f;
+    color: $secondary;
   }
 }
-
-p {
-  line-height: 2;
-  color: lighten($dark, 20%);
-}
-
-.ProfileSection {
-  width: 80%;
-  margin-bottom: 48px;
-
-  
-  ul,
-  li {
-    margin-bottom: 16px;
-  }
-
-  ul {
-    margin: 16px;
-  }
-
-  ul,
-  li,
-  p,
-  span {
-    font-family: 'Lato';
-    font-size: 13px;
-    letter-spacing: 0.3px;
-    color: $light;
-  }
-
-  p,
-  span {
-    display: block;
-    margin-bottom: 8px;
-  }
-  h4 {
-    text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 1.5px;
-    padding-bottom: 16px;
-    border-bottom: $border;
-    margin: 16px 0;
-  }
-}
-
-.Icons {
-  margin: 48px;
-  svg {
-    color: $bubbles;
-    margin: 0 16px;
-    cursor: pointer;
-    &:hover {
-      color: lighten($bubbles, 10%);
-    }
-  }
-}
-
-
-
-
-

@@ -1,27 +1,22 @@
 <template>
   <div class="Index">
-    <Sidebar />
-
     <main class="page">
-      <MyWork />
-      <PersonalProjects />
+      <Portfolio />
     </main>
   </div>
 </template>
 
 <script>
-import Sidebar from '@/components/Sidebar'
-import MyWork from '@/components/MyWork'
-import PersonalProjects from '@/components/PersonalProjects'
+import Portfolio from "@/components/Portfolio";
 
 export default {
-  components: { Sidebar, MyWork, PersonalProjects }
-}
+  components: { Portfolio },
+};
 </script>
 
 <style lang="scss">
-@import '../assets/scss/_variables.scss';
-@import '../assets/scss/_breakpoints.scss';
+@import "../assets/scss/_variables.scss";
+@import "../assets/scss/_breakpoints.scss";
 
 .Index {
   display: flex;

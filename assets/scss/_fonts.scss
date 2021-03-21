@@ -1,11 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
 @font-face {
-  font-family: LeagueSpartan;
-  src: url('./fonts/Alcubierre.otf') format("opentype");
+  font-family: Audrey;
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Audrey/Audrey-Normal.otf") format("opentype");
+}
+@font-face {
+  font-family: Audrey;
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/Audrey/Audrey-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: Audrey;
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/Audrey/Audrey-Bold.otf") format("opentype");
 }
 
 @font-face {
-  font-family: LeagueSpartan;
-  src: url('./fonts/LeagueSpartan.otf') format("opentype");
+  font-family: Glamor;
+  src: url("./fonts/Glamor/Glamor-Regular.otf") format("opentype");
 }
