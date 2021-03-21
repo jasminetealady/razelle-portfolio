@@ -37,7 +37,7 @@ export default {
     padding: 48px 16px;
 
     @include sm() {
-      padding: 24px;
+      padding: 24px 24px 0;
     }
 
     .headline {
@@ -54,11 +54,10 @@ export default {
       }
 
       h1 {
-        margin-bottom: 16px;
+        margin: 16px 0;
         font-size: 32px;
         @include sm() {
           text-align: left;
-          font-size: 24px;
         }
       }
 
@@ -69,6 +68,7 @@ export default {
         letter-spacing: -1px;
         @include sm() {
           text-align: left;
+          font-weight: 500;
         }
       }
     }

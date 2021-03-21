@@ -33,6 +33,9 @@
 
   a {
     font-size: 20px;
+    @include sm() {
+      font-weight: 500;
+    }
   }
 
   svg {
