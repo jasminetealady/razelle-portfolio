@@ -23,7 +23,7 @@
 
       <Project
         title="my gif valentine"
-        role="This was app we created at my former digital agency for Valentine's Day. I built out the front end, collaborated on the idea for the project, and participated in design decisions to create a whimsical and fun way to celebrate Valentine's Day."
+        role="This was an app we created at my former digital agency for Valentine's Day. I built out the front end, collaborated on the idea for the project, and participated in design decisions to create a whimsical and fun way to celebrate Valentine's Day."
         text="Send a funny mad lib valentine with a corresponding GIF to someone you love!"
         :projectUrl="'https://mygifvalentine.com/'"
         :image="require('../assets/images/valentine.png')"
@@ -31,7 +31,7 @@
         <a
           href="https://savvyapps.com/blog/why-digital-agencies-should-create-their-own-products"
           target="_blank"
-          >The making of video (hint: I talk in it a bit)</a
+          >The making of video (I talk in it a bit)</a
         >
       </Project>
 
