@@ -3,7 +3,9 @@
     <nav>
       <div class="headline">
         <a href="/"><h1>Razelle McCarrick</h1></a>
-        <h2>Front End Engineer. Design & UI UX Oriented</h2>
+        <h2>
+          Front End Engineer with a passion for UI, UX, branding, and design
+        </h2>
         <Contact />
       </div>
     </nav>
