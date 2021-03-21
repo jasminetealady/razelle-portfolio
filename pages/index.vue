@@ -23,7 +23,7 @@ export default {
   min-height: 100vh;
   width: 100%;
 
-  @include sm() {
+  @include sm {
     flex-direction: column;
   }
 }

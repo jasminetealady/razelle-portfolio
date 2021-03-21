@@ -1,6 +1,5 @@
 @import "variables";
 @import "reset";
-@import "toggleswitch";
 @import "fonts";
 @import "breakpoints";
 
@@ -12,36 +11,8 @@ html {
   background: $light;
 }
 
-body {
-  position: relative;
-}
-
-html {
+* {
   box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-p {
-  font-family: "Lato";
-  line-height: 2;
-  color: lighten($dark, 20%);
-}
-
-.page {
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 24px;
-
-  @include sm() {
-    padding: 0 16px;
-  }
 }
 
 h1,
@@ -52,10 +23,7 @@ h5,
 h6 {
   color: lighten($dark, 20%);
   font-weight: 500;
-}
-
-strong {
-  font-weight: bold;
+  text-transform: lowercase;
 }
 
 a {
@@ -68,5 +36,29 @@ a {
 
   &:visited {
     color: $secondary;
+  }
+}
+
+p {
+  font-family: "Lato";
+  font-size: 16px;
+  line-height: 2;
+  color: lighten($dark, 20%);
+
+  @include sm {
+    font-size: 14px;
+  }
+}
+
+.page {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+
+  @include sm {
+    padding: 0 16px;
   }
 }

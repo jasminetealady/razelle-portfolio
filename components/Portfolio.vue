@@ -3,7 +3,7 @@
     <div class="wrapper">
       <Project
         title="notarize (present)"
-        role="I build new features, while also focusing on component design in close collaboration with the design team, writing unit and end to end tests. Currently I specialize in accessibility ensuring an accessible product experience and have been solely responsible for making our product accessible."
+        role="I build new features, while also focusing on component design in close collaboration with the design team, writing unit and end to end tests. Currently I specialize in accessibility ensuring an accessible product experience and have lead the project for making our product accessible. I have been responsible for splitting up, organizing, documenting, and delegating some of the work to an intern on my team."
         text="Notarize is a remote online notarization platform that allows individual signers, businesses, title agents, and lenders to notarize documents online via video meetings. We've partnered with companies such as Disney, Adobe, and more as we scale and grow."
         :projectUrl="'https://app.notarize.com/login'"
         :image="require('../assets/images/notarize.png')"
@@ -103,5 +103,3 @@ export default {
   components: { Project },
 };
 </script>
-
-<style lang="scss"></style>

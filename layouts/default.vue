@@ -36,7 +36,7 @@ export default {
     background: $light;
     padding: 48px 16px;
 
-    @include sm() {
+    @include sm {
       padding: 24px 24px 0;
     }
 
@@ -48,7 +48,6 @@ export default {
 
       h1,
       h2 {
-        text-transform: lowercase;
         text-align: center;
         width: 100%;
       }
@@ -56,7 +55,7 @@ export default {
       h1 {
         margin: 16px 0;
         font-size: 32px;
-        @include sm() {
+        @include sm {
           text-align: left;
         }
       }
@@ -66,7 +65,7 @@ export default {
         color: $secondary;
         font-size: 22px;
         letter-spacing: -1px;
-        @include sm() {
+        @include sm {
           text-align: left;
           font-weight: 500;
         }

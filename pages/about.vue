@@ -46,7 +46,7 @@ export default {
   justify-content: center;
   margin-bottom: 96px;
 
-  @include sm() {
+  @include sm {
     text-align: left;
   }
 

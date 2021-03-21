@@ -26,14 +26,14 @@
   justify-content: center;
   align-items: center;
 
-  @include sm() {
+  @include sm {
     justify-content: flex-start;
     margin: 32px 0;
   }
 
   a {
     font-size: 20px;
-    @include sm() {
+    @include sm {
       font-weight: 500;
     }
   }
@@ -46,7 +46,7 @@
     &:hover {
       color: lighten($secondary, 10%);
     }
-    @include sm() {
+    @include sm {
       margin-left: 0;
       margin-right: 16px;
       font-size: 20px;

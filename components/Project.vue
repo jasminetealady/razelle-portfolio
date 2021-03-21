@@ -2,14 +2,13 @@
   <div :class="[{ reverse: reverse }, 'Project']">
     <div class="description">
       <h4>{{ title }}</h4>
-      <p class="position">{{ position }}</p>
       <p>{{ text }}</p>
       <br />
       <p>{{ role }}</p>
       <slot></slot>
     </div>
     <div class="project-img">
-      <a class="project-link" :href="projectUrl" target="_blank">
+      <a class="project-img-link" :href="projectUrl" target="_blank">
         <img :src="image" />
         <img
           v-if="secondaryImage"
@@ -28,7 +27,6 @@ export default {
     "title",
     "text",
     "projectUrl",
-    "position",
     "image",
     "secondaryImage",
     "tertiaryImage",
@@ -42,12 +40,6 @@ export default {
 @import "../assets/scss/_variables.scss";
 @import "../assets/scss/breakpoints.scss";
 
-// .Project:first-of-type {
-//   @include sm() {
-//     margin-bottom: 80px;
-//   }
-// }
-
 .Project {
   display: flex;
   width: 100%;
@@ -58,12 +50,12 @@ export default {
 
   &.reverse {
     flex-direction: row-reverse;
-    @include sm() {
+    @include sm {
       flex-direction: column;
     }
   }
 
-  @include sm() {
+  @include sm {
     flex-direction: column;
     margin-bottom: 48px;
   }
@@ -77,10 +69,14 @@ export default {
     align-items: center;
     cursor: pointer;
 
-    @include sm() {
+    @include sm {
       width: 100%;
       justify-content: flex-start;
       margin-top: 24px;
+    }
+
+    .project-img-link {
+      display: flex;
     }
 
     img {
@@ -88,35 +84,33 @@ export default {
       position: relative;
       z-index: 3;
       transition: 0.4s all ease-in;
-      @include sm() {
+      @include sm {
         width: 100%;
       }
     }
+
     .secondary-img {
       position: absolute;
       z-index: 2;
       top: 48px;
       right: 16px;
-      @include sm() {
+      @include sm {
         display: none;
       }
     }
+
     .tertiary-img {
       position: absolute;
       z-index: 1;
       top: 80px;
       left: 16px;
-      @include sm() {
+      @include sm {
         display: none;
       }
     }
 
     .tertiary-img {
       position: absolute;
-    }
-
-    .project-link {
-      display: flex;
     }
 
     &:hover {
@@ -137,7 +131,7 @@ export default {
   .description {
     width: 50%;
     padding: 16px;
-    @include sm() {
+    @include sm {
       width: 100%;
     }
     a {
@@ -150,24 +144,16 @@ export default {
   }
 
   h4 {
-    border-bottom: #666 solid 1px;
+    border-bottom: $dark solid 1px;
     padding-bottom: 16px;
     margin-bottom: 16px;
     font-size: 24px;
     color: lighten($dark, 20%);
     display: inline-block;
 
-    @include sm() {
+    @include sm {
       font-size: 20px;
     }
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  .position {
-    font-weight: 900;
   }
 }
 </style>
