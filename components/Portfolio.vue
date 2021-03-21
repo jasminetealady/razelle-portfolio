@@ -12,7 +12,7 @@
 
       <Project
         title="flourish"
-        role="I bult the landing page in close collaboration with the design team, translating Figma specs into front end code."
+        role="I built the landing page in close collaboration with the design team, translating Figma specs into front end code."
         text="Flourish provides volunteer opportunities by uniquely matching you to organizations based on your passions, skills, and schedule."
         :projectUrl="'https://onflourish.org'"
         :image="require('../assets/images/flourish2.png')"
@@ -37,7 +37,7 @@
 
       <Project
         title="the draft network portfolio page"
-        role="At my former digital agency, I built out the case study page for our work on The Draft Network web app to showcase our work."
+        role="At my former digital agency, I built out the case study page for our work on The Draft Network web app."
         text="The Draft Network case study"
         :projectUrl="'https://savvyapps.com/work/the-draft-network'"
         :image="require('../assets/images/draft-network.png')"
