@@ -76,10 +76,11 @@ export default {
     }
 
     .project-img-link {
-      display: flex;
+      // display: flex;
     }
 
     img {
+      // display: flex;
       width: 400px;
       position: relative;
       z-index: 3;
