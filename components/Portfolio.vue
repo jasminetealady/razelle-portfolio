@@ -103,3 +103,10 @@ export default {
   components: { Project },
 };
 </script>
+
+<style lang="scss">
+.MyWork,
+.wrapper {
+  width: 100%;
+}
+</style>
