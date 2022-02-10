@@ -22,7 +22,7 @@
     "vue-mq": "^1.0.1"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.19.4",
     "sass-loader": "^7.3.1"
   }
